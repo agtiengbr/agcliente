@@ -1,0 +1,13 @@
+{
+    "name": "agti/agcliente",
+    "autoload": {
+        "psr-4": {
+            "AGTI\\Cliente\\": "src/"
+        }
+    },
+    "type": "prestashop-module",
+    "config": {
+        "preferred-install": "dist",
+        "prepend-autoloader": false
+    }
+}

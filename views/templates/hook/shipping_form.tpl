@@ -1,0 +1,1 @@
+<p>A partir da versão 1.19.0 do módulo agcliente, a simulação de frete foi movida para um módulo separado. Por favor, acesse a página de configurações do módulo agcliente e faça o download do módulo Simulador de Frete da AGTI gratuitamente.</p>

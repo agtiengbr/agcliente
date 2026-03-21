@@ -1,0 +1,236 @@
+/*página do produto */
+#product .agti_shipping_simulation-ps16{
+	padding: 7px 19px;
+}
+
+/*#product .agmelhorenvio-ps16 .image{
+	display: none;
+}*/
+
+#product .agti_shipping_simulation .form-control{
+	display: inline-block;
+	width: 50%;
+	margin-bottom: 4px;
+}
+
+#product .agti_shipping_simulation-ps17 .btn-primary{
+	font-size: 12px;
+	padding: 4px 12px;
+	min-height: 40px;
+}
+
+.agti_shipping_simulation-ps17 input{
+	height: 41px;
+    position: relative;
+    top: 1px;
+    padding: 0 10px;
+    width: 110px;
+    margin-bottom: 4px;
+}
+
+.agti_shipping_simulation-ps17 table {
+	margin-top: 10px;
+    background: white;
+    width: 100%;
+    position: relative;
+}
+
+.agti_shipping_simulation-ps17 table tr td:first-child {
+	text-align: right;
+}
+
+.agti_shipping_simulation-ps17 table tr td:nth-child(2) {
+	text-align: center;
+}
+
+.agti_shipping_simulation-ps17 table tr td:nth-child(3) {
+	text-align: center;
+}
+
+.agti_shipping_simulation-ps17 table tr td:last-child {
+	text-align: left;
+}
+
+.agti_shipping_simulation-ps17 table tr td {
+	padding: 10px 12px;
+}
+
+.agti_shipping_simulation-ps17 table tr {
+	border : solid;
+	border-width : 1px 0;
+	border-color : #ddd;
+    cursor: pointer;
+    transition: 0.05s;
+}
+
+.agti_shipping_simulation-ps17 table tr:hover {
+    opacity: 0.8;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.agti_shipping_simulation-ps17 table tr:active {
+    opacity: 1;
+}
+
+.agti_shipping_simulation-ps17 table tr td.image img{
+	width: 80px;
+}
+
+
+/* carrinho de compras */
+#order .agti_shipping_simulation-ps16,
+#order-opc .agti_shipping_simulation-ps16{
+    background: #fbfbfb;
+    border: 1px solid #d6d4d4;
+    padding: 14px 18px 13px;
+    margin: 0 0 30px 0;
+}
+
+#order .agti_shipping_simulation-ps16 .form-control,
+#order-opc .agti_shipping_simulation-ps16 .form-control{
+	display: inline-block;
+	width: 120px;
+	margin-bottom: 4px;
+}
+
+#order .agti_shipping_simulation-ps16 .btn-primary,
+#order-opc .agti_shipping_simulation-ps16 .btn-primary{
+	font-size: 12px;
+	padding: 4px 12px;
+}
+
+.agti_shipping_simulation-ps16 table tr td.image img{
+	width: 80px;
+}
+
+#product .agti_shipping_simulation-ps16 .btn-primary{
+	font-size: 12px;
+	padding: 4px 12px;
+	min-height: 27px;
+}
+
+.agti_shipping_simulation .address {margin-top: 10px}
+
+.agti_shipping_simulation.card {
+	padding: 15px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.selected-carrier {
+    background-color: #d3d3d340;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+#product .agti_shipping_simulation_options {
+    pointer-events: none;
+}
+
+#product .agti_shipping_simulation_options td.radio {
+    display: none;
+}
+
+/* loading */
+.table-loading {
+    pointer-events: none;
+}
+
+.agti_simulation_loading {
+    text-align: center;
+    padding: 50px 0;
+    position: absolute;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: #0000000a;
+    pointer-events: none;
+    border: 1px solid lightgrey;
+}
+
+.agti_simulation_loading:before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border: 2px solid #888;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* Cadastro de endereço */
+#agti-shipping-address-error-message-box:empty, #agti-shipping-address-success-message-box:empty {
+    display: none;
+}
+
+.modal-loading {
+    pointer-events: none;
+}
+
+#agti-shipping-address-loading {
+    text-align: center;
+    position: absolute;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: #0000000a;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+}
+
+#agti-shipping-address-loading:before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border: 2px solid #888;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #000;
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.agti_shipping_simulation  .hidden { display: none}

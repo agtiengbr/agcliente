@@ -1,0 +1,9 @@
+.nav.vertical li{width: 100%;; border-left: 1px solid #ddd; border-right: 1px solid #ddd;}
+.nav.vertical li:first-child{border-top: 1px solid #ddd;}
+.nav.vertical li:last-child{border-bottom: 1px solid #ddd;}
+
+.nav.vertical li > a{border: none !important; border-radius: 0; padding-right: 0; margin-right: 0}
+
+.adminmodules #content.bootstrap .panel {
+    position: unset;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ModulesAgclienteAdmin.xlf" source-language="pt-BR" target-language="pt-BR" datatype="plaintext">
+    <body>
+      <trans-unit id="f60f2bf8117c334e587c6f8ef750b882">
+        <source>All results</source>
+        <target>Todos os Resultados</target>
+      </trans-unit>
+      <trans-unit id="dc30bc0c7914db5918da4263fce93ad2">
+        <source>Clear</source>
+        <target>Limpar</target>
+      </trans-unit>
+      <trans-unit id="d7778d0c64b6ba21494c97f77a66885a">
+        <source>Filter</source>
+        <target>Filtar</target>
+      </trans-unit>
+      <trans-unit id="bafd7322c6e97d25b6299b5d6fe8920b">
+        <source>No</source>
+        <target>Não</target>
+      </trans-unit>
+      <trans-unit id="93cba07454f06a4a960172bbd6e2a435">
+        <source>Yes</source>
+        <target>Sim</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

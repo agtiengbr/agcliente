@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ModulesAgclienteHookproductbuttons.xlf" source-language="pt-BR" target-language="pt-BR" datatype="plaintext">
+    <body>
+      <trans-unit id="9a605fc0e1667ebdbd0ac37cf9f90789">
+        <source>Unfortunately, there are no carriers available for your delivery address.</source>
+        <target>Infelizmente não temos transportadoras que atendam esse endereço.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

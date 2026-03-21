@@ -1,0 +1,103 @@
+.agtable td:not(:last-child) {
+    vertical-align: bottom!important;
+}
+
+.row-action-icon {
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.row-action-icon:hover {
+    color: #25b9d7;
+}
+
+#add-row-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-loading {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.agtable tbody:has(.div-loading) {
+    position: relative;
+    opacity: .5;
+    pointer-events: none;
+}
+
+.agtable td input.border-bottom, select.border-bottom, .border-bottom input.form-control {
+    border: 0!important;
+    border-bottom: 1px solid #bbcdd2!important;
+}
+
+.add-icon {
+    margin-right: 5px;
+}
+
+.btn-limpar {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.btn-limpar:hover {
+    opacity: 1;
+}
+
+.custom-hidden {
+    visibility: hidden;
+}
+
+.choose {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.choose > div > div {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+    border: 1px solid #bbcdd2;
+    border-radius: 4px;
+    padding-block: 8px;
+}
+
+.choose > div > div:not(:empty) {
+    display: block;
+    max-height: 150px;
+    max-width: 300px;
+    min-width: 100%;
+    overflow-y: auto;
+}
+
+.choose > div > div > div {
+    padding: 1px 16px;
+    cursor: pointer;
+    width: 300px;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.choose > div > div > div:hover {
+    background-color: #f9f9f9;
+}
+
+.bootstrap .form-control[disabled], .bootstrap input[disabled][type="text"] {
+    opacity: .5;
+}

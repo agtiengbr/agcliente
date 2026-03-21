@@ -1,0 +1,4 @@
+services:
+  agti.cliente.serializer:
+    class: Symfony\Component\Serializer\Serializer 
+    factory: ['AGTI\Cliente\Infrastructure\Serializer\Serializer', 'buildSerializer']

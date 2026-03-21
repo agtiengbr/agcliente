@@ -1,0 +1,67 @@
+.pagination-row {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-row input {
+  text-align: center;
+}
+
+.pagination-row .disabled {
+  pointer-events: none;
+}
+
+.pagination-row .disabled a {
+  color: lightgrey;
+}
+
+.pagination-row a {
+  cursor: pointer;
+  padding-inline: 10px;
+}
+
+.pagination-row select {
+  width: auto !important;
+}
+
+/* Tabela com overflow no body */
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody {
+  display: block;
+  max-height: 55vh;
+  overflow: auto;
+}
+
+/* Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.panel-heading {
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+}

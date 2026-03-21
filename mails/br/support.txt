@@ -1,0 +1,6 @@
+##   Dados do Cliente
+*   **Loja:** {shop}
+*   **Licença:** {license}
+
+##   Mensagem
+{message}

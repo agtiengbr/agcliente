@@ -1,0 +1,15 @@
+#product .agti_shipping_simulation-ps17 i,
+#cart .agti_shipping_simulation-ps17 i{
+	position: relative;
+	top: 5px;
+}
+
+#product .agti_shipping_simulation-ps17 .btn-primary{
+	line-height: 25px;
+	min-height: 30px;
+}
+
+#cart .agti_shipping_simulation-ps17 .btn-primary {
+	line-height: 18px;
+	min-height: 30px;
+}

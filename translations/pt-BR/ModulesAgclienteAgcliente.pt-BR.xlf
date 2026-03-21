@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ModulesAgclienteAgcliente.xlf" source-language="pt-BR" target-language="pt-BR" datatype="plaintext">
+    <body>
+      <trans-unit id="dea8acff1d328f2688bda26edaa9b07d">
+        <source>AgCliente</source>
+        <target>AgCliente</target>
+      </trans-unit>
+      <trans-unit id="0ec082f30f6745e97d9ba815b31b60e4">
+        <source>Authentication error.</source>
+        <target>Authentication error.</target>
+      </trans-unit>
+      <trans-unit id="7905a48d526fb1bc957d8b945dcd821e">
+        <source>Módule %s updated with success!</source>
+        <target>Módule %s updated with success!</target>
+      </trans-unit>
+      <trans-unit id="d2be77155c7d627178328e9876458a41">
+        <source>This module is required to use the modules from AGTI.</source>
+        <target>This module is required to use the modules from AGTI.</target>
+      </trans-unit>
+      <trans-unit id="edc1aadee3c63c814405274c8d288bd2">
+        <source>You already have the most recent version of module %s available for your shop.</source>
+        <target>You already have the most recent version of module %s available for your shop.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

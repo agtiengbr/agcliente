@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ModulesAgclienteDashboard_modules.xlf" source-language="pt-BR" target-language="pt-BR" datatype="plaintext">
+    <body>
+      <trans-unit id="c49182dc0c7a70b9cd2e10853d9ec6c7">
+        <source>Changelog</source>
+        <target>Log de Alterações</target>
+      </trans-unit>
+      <trans-unit id="f1206f9fadc5ce41694f69129aecac26">
+        <source>Configure</source>
+        <target>Configurar</target>
+      </trans-unit>
+      <trans-unit id="5b008951213ac933cab550ae80b43529">
+        <source>Current Version</source>
+        <target>Versão Atual</target>
+      </trans-unit>
+      <trans-unit id="a6a04307fd90d0c2821b45125e6a0a25">
+        <source>Downloaded</source>
+        <target>Disponíveis na Loja</target>
+      </trans-unit>
+      <trans-unit id="b1a1ae81a69619f3c3349fef15559189">
+        <source>Last Available Version</source>
+        <target>Última Versão Disponível</target>
+      </trans-unit>
+      <trans-unit id="852e0c140b545088e536d60f0fab23c6">
+        <source>Last Available Version for You</source>
+        <target>Última Versão Disponível para Você</target>
+      </trans-unit>
+      <trans-unit id="dbd1d057b29c3944d15509013e0b7060">
+        <source>New Version Released</source>
+        <target>Desatualizado</target>
+      </trans-unit>
+      <trans-unit id="52ef9633d88a7480b3a938ff9eaa2a25">
+        <source>Others</source>
+        <target>Outros</target>
+      </trans-unit>
+      <trans-unit id="0ba3a5b1bd04175ed0b47affeca586fc">
+        <source>See Product</source>
+        <target>Ver Produto</target>
+      </trans-unit>
+      <trans-unit id="06933067aafd48425d67bcb01bba5cb6">
+        <source>Update</source>
+        <target>Atualizar</target>
+      </trans-unit>
+      <trans-unit id="f683581d3e75f05f9d9215f9b4696cef">
+        <source>Upgrade</source>
+        <target>Atualizações</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
