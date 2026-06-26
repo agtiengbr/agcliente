@@ -1,7 +1,18 @@
 <?php
 
+use PrestaShop\PrestaShop\Adapter\Product\PriceFormatter;
+
 class AgClienteMathHelper
 {
+    private static function formatPrice($price)
+    {
+        if (class_exists(PriceFormatter::class)) {
+            return (new PriceFormatter())->convertAndFormat($price);
+        }
+
+        return Tools::displayPrice($price);
+    }
+
     public static function applyPriceVariation($value, $variation)
     {
         if (!$variation) {
@@ -125,9 +136,9 @@ class AgClienteMathHelper
 
             $return[] = array(
                 'total' => $total_value,
-                'formatted_total' => Tools::displayPrice($total_value),
+                'formatted_total' => self::formatPrice($total_value),
                 'installment_value' => $installment_value,
-                'formatted_installment_value' => Tools::displayPrice($installment_value)
+                'formatted_installment_value' => self::formatPrice($installment_value)
             );
         }
 
