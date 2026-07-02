@@ -43,7 +43,7 @@ class AgLoader
 
             if (is_array($classes)) {
                 foreach ($classes as $class) {
-                    if (strpos($class, '.php') !== false && $class !== 'index.php') {
+                    if (str_ends_with($class, '.php') && $class !== 'index.php') {
                         require_once $dirname . '/' . $class;
                     } elseif (is_dir($dirname . '/' . $class) && $class !== '.' && $class !== '..') {
                         self::loadDir($dirname . '/' . $class);
