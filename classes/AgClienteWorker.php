@@ -92,6 +92,10 @@ class AgClienteWorker extends AgObjectModel
              $idx_worker = $this->idx;
         }
 
+        if ((int) $idx_worker < 1) {
+            $idx_worker = 1;
+        }
+
         if (is_null($total_workers)) {
             $group = $this->getWorkerGroup();
             $total_workers = $group->qty_wanted_workers;

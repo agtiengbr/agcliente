@@ -116,16 +116,22 @@ class AgClienteWorkerGroup extends AgObjectModel
                 continue;
             }
 
-            $worker->save();
-            if (Db::getInstance()->getMsgError()) {
+            if (!$worker->save()) {
                 \Logger::addLog('AgClienteWorkerGroup::createWorkers() - Erro ao salvar worker: ' . Db::getInstance()->getMsgError(), 3, null, 'AgClienteWorkerGroup', $this->id_agworker_group, true);
                 continue;
             }
 
+            $workerId = (int) $worker->id_agworker;
+            if ($workerId <= 0) {
+                \Logger::addLog('AgClienteWorkerGroup::createWorkers() - Worker salvo sem id_agworker valido', 3, null, 'AgClienteWorkerGroup', $this->id_agworker_group, true);
+                continue;
+            }
+            $worker->id = $workerId;
+
             $url = Context::getContext()->shop->getBaseURL(true) . 'index.php?fc=module';
             $url .= '&module=' . $this->module;
             $url .= '&controller=' . $this->controller;
-            $url .= '&id_agworker=' . $worker->id;
+            $url .= '&id_agworker=' . $workerId;
 
             if ($this->querystring) {
                 $url .= "&{$this->querystring}";
