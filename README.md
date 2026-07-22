@@ -14,9 +14,8 @@ Serviços de suporte técnico estão disponíveis mediante contratação. Solici
 
 ## Instalação
 
-1. Copie a pasta do módulo para o diretório `modules/` da sua instalação PrestaShop.
-2. No diretório do módulo, execute `composer install` para instalar as dependências necessárias.
-3. No painel administrativo do PrestaShop, acesse **Módulos > Gerenciador de Módulos**, localize o módulo e clique em **Instalar**.
+1. Baixe o arquivo `.zip` da [versão mais recente](https://github.com/agtiengbr/agcliente/releases/latest).
+2. No painel administrativo do PrestaShop, acesse **Módulos → Gerenciador de módulos**, clique em **Enviar um módulo** e selecione o arquivo baixado. O envio do arquivo já instala o módulo.
 
 **Importante:** Este módulo deve ser instalado antes de qualquer outro módulo da AGTI que dependa dele.
 
