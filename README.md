@@ -12,6 +12,9 @@ Serviços de suporte técnico estão disponíveis mediante contratação. Solici
 
 **suporte@agti.eng.br**
 
+Página do produto na AGTI: https://www.agti.eng.br/13-modulos-para-prestashop
+
+
 ## Instalação
 
 1. Baixe o arquivo `.zip` da [versão mais recente](https://github.com/agtiengbr/agcliente/releases/latest).
