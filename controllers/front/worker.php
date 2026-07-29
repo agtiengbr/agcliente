@@ -15,6 +15,9 @@ class agclienteworkerModuleFrontController extends ModuleFrontController
             exit();
         }
 
+        set_time_limit(0);
+        ignore_user_abort(true);
+
         $group = AgClienteWorkerGroup::findByName('agcliente_main');
         $asso = AgClienteWorkerGroupShop::getFromWorkerGroup($group);
 
