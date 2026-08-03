@@ -350,7 +350,7 @@ trait AgClienteModuleTrait
             }
 
             $existent_worker_group->module = $worker['module'];
-            $existent_worker_group->controller = $worker['controller'];
+            $existent_worker_group->controller = $worker['controller'] ?? '';
 
             if (isset($worker['querystring'])) {
                 $existent_worker_group->querystring = $worker['querystring'];
