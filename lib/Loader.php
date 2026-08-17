@@ -4,8 +4,14 @@ class AgLoader
 {
 	public static function loadDir($dirname)
     {
+        static $loadedDirs = array();
+
         if (!empty($dirname)) {
             if (!is_dir($dirname)) {
+                return;
+            }
+
+            if (isset($loadedDirs[$dirname])) {
                 return;
             }
 
@@ -38,6 +44,8 @@ class AgLoader
             if (substr($dirname, -13) == '/translations') {
                 return;
             }
+
+            $loadedDirs[$dirname] = true;
             
             $classes = scandir($dirname);
 
