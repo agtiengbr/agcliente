@@ -10,7 +10,10 @@ Vue.component('agti-zipcode-grid-cities', {
         return {
             cities: [],
             cityData: '',
-            data_api_url: ''
+            data_api_url: '',
+            searchTimer: null,
+            searchRequest: null,
+            searchRequestId: 0
         }
     },
     mounted: function() {
@@ -37,27 +40,69 @@ Vue.component('agti-zipcode-grid-cities', {
         }
     },
     methods: {
-        search: async function(name){
-            if(name) {
+        search: function(name){
+            if (this.searchTimer !== null) {
+                clearTimeout(this.searchTimer);
+                this.searchTimer = null;
+            }
+
+            if (this.searchRequest !== null) {
+                this.searchRequest.cancel('Busca substituída por uma consulta mais recente.');
+                this.searchRequest = null;
+            }
+
+            const requestId = ++this.searchRequestId;
+
+            if (!name) {
+                this.cities = [];
+                return;
+            }
+
+            this.searchTimer = setTimeout(async () => {
+                this.searchTimer = null;
+
                 let state = '';
                 this.row.uf ? state = this.row.uf : this.row.state ? state = this.row.state : state = '';
 
-                if(state == 'undefined') {
-                    state = ''
+                if (state == 'undefined') {
+                    state = '';
                 }
 
-                let data = await axios.get(`${this.data_api_url}&searchCityByName&uf=${state}&name=${name}`);
-                
-                if(data.data) {
-                    this.cities = data.data;
-                } else {
-                    this.cities = [];
+                const request = axios.CancelToken.source();
+                this.searchRequest = request;
+
+                try {
+                    const data = await axios.get(
+                        `${this.data_api_url}&searchCityByName&uf=${state}&name=${name}`,
+                        { cancelToken: request.token }
+                    );
+
+                    if (requestId === this.searchRequestId) {
+                        this.cities = data.data || [];
+                    }
+                } catch (error) {
+                    if (!axios.isCancel(error) && requestId === this.searchRequestId) {
+                        this.cities = [];
+                    }
+                } finally {
+                    if (this.searchRequest === request) {
+                        this.searchRequest = null;
+                    }
                 }
-            } else {
-                this.cities = [];
-            }
+            }, 250);
         },
         selected: function(city){
+            if (this.searchTimer !== null) {
+                clearTimeout(this.searchTimer);
+                this.searchTimer = null;
+            }
+
+            if (this.searchRequest !== null) {
+                this.searchRequest.cancel('Cidade selecionada.');
+                this.searchRequest = null;
+            }
+
+            this.searchRequestId++;
             this.cities = [];
             this.row.city = city;
             this.$emit('selected', city, this.row);
