@@ -141,7 +141,9 @@ class AgClienteWorkerGroup extends AgObjectModel
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HEADER, 0);
             curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-            curl_setopt($ch, CURLOPT_TIMEOUT_MS, 500);
+            // A renovação do Bling precisa alcançar o controlador mesmo quando
+            // a inicialização da loja ultrapassa o limite padrão de 500 ms.
+            curl_setopt($ch, CURLOPT_TIMEOUT_MS, $this->group_name === 'agbling_renewToken' ? 10000 : 500);
             curl_exec($ch);
             curl_close($ch);
         }
