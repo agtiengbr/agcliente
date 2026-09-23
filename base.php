@@ -51,7 +51,7 @@ class BaseAgCliente extends AgModule
     public function __construct()
     {
         $this->name                   = 'agcliente';
-        $this->version                = '1.22.3';
+        $this->version                = '1.22.4';
         $this->bootstrap              = true;
         $this->author                 = 'AGTI';
         $this->need_instance          = 1;

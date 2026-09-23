@@ -141,10 +141,26 @@ class AgClienteWorkerGroup extends AgObjectModel
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_HEADER, 0);
             curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-            // A renovação do Bling precisa alcançar o controlador mesmo quando
-            // a inicialização da loja ultrapassa o limite padrão de 500 ms.
-            curl_setopt($ch, CURLOPT_TIMEOUT_MS, $this->group_name === 'agbling_renewToken' ? 10000 : 500);
+            // A renovação do Bling leva dezenas de segundos; aguardar a resposta
+            // evita descartar a chamada antes de o controlador iniciar.
+            curl_setopt($ch, CURLOPT_TIMEOUT_MS, $this->group_name === 'agbling_renewToken' ? 60000 : 500);
             curl_exec($ch);
+            if ($this->group_name === 'agbling_renewToken') {
+                $info = curl_getinfo($ch);
+                try {
+                    \Logger::addLog(sprintf(
+                        'Bling renewal dispatch: worker=%d curl=%d http=%d connect=%.3f total=%.3f host=%s',
+                        $workerId,
+                        curl_errno($ch),
+                        isset($info['http_code']) ? $info['http_code'] : 0,
+                        isset($info['connect_time']) ? $info['connect_time'] : 0,
+                        isset($info['total_time']) ? $info['total_time'] : 0,
+                        parse_url($url, PHP_URL_HOST)
+                    ), 1);
+                } catch (\Throwable $e) {
+                    // Falha no registro não deve interromper os demais trabalhos.
+                }
+            }
             curl_close($ch);
         }
     }
