@@ -121,12 +121,15 @@ class AgClienteWorkerGroup extends AgObjectModel
                 continue;
             }
 
-            $workerId = (int) $worker->id_agworker;
+            // ObjectModel::add() preenche id; o campo específico não é
+            // sincronizado automaticamente depois do INSERT.
+            $workerId = (int) $worker->id;
             if ($workerId <= 0) {
-                \Logger::addLog('AgClienteWorkerGroup::createWorkers() - Worker salvo sem id_agworker valido', 3, null, 'AgClienteWorkerGroup', $this->id_agworker_group, true);
+                \Logger::addLog('AgClienteWorkerGroup::createWorkers() - Worker ' . $this->group_name . ' salvo sem id valido', 3, null, 'AgClienteWorkerGroup', $this->id_agworker_group, true);
                 continue;
             }
             $worker->id = $workerId;
+            $worker->id_agworker = $workerId;
 
             $url = Context::getContext()->shop->getBaseURL(true) . 'index.php?fc=module';
             $url .= '&module=' . $this->module;
